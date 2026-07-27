@@ -16,29 +16,29 @@ function Home() {
   const [backendStatus, setBackendStatus] = useState("Checking...");
   const [isOnline, setIsOnline] = useState(false);
 
-  useEffect(() => {
-    async function checkBackend() {
-      try {
-        const response = await fetch(
-          "http://127.0.0.1:8000/api/health"
-        );
+ useEffect(() => {
+  async function checkBackend() {
+    try {
+      const response = await fetch(
+        "https://healthinsight-backend-bvvk.onrender.com/api/health"
+      );
 
-        if (!response.ok) {
-          throw new Error();
-        }
-
-        const data = await response.json();
-
-        setBackendStatus(data.status);
-        setIsOnline(true);
-      } catch {
-        setBackendStatus("Offline");
-        setIsOnline(false);
+      if (!response.ok) {
+        throw new Error();
       }
-    }
 
-    checkBackend();
-  }, []);
+      const data = await response.json();
+
+      setBackendStatus(data.status);
+      setIsOnline(true);
+    } catch {
+      setBackendStatus("Offline");
+      setIsOnline(false);
+    }
+  }
+
+  checkBackend();
+}, []);
 
   return (
     <main className="home-page">
