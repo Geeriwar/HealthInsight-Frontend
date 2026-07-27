@@ -1,0 +1,144 @@
+@import "./variables.css";
+
+/* =========================
+   Global Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Body
+========================= */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =========================
+   Links
+========================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   Lists
+========================= */
+
+ul {
+  list-style: none;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* =========================
+   Inputs
+========================= */
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+/* =========================
+   Images
+========================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   Common Container
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* =========================
+   Common Card
+========================= */
+
+.card {
+  background: var(--surface-color);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-light);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+/* =========================
+   Headings
+========================= */
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-light);
+}
+
+/* =========================
+   Utility Classes
+========================= */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
