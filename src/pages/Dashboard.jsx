@@ -30,15 +30,18 @@ function Dashboard() {
   useEffect(() => {
     async function loadDashboard() {
       try {
-        const urls = [
-          "http://127.0.0.1:8000/api/eda/overview",
-          "http://127.0.0.1:8000/api/eda/gender",
-          "http://127.0.0.1:8000/api/eda/target",
-          "http://127.0.0.1:8000/api/eda/age",
-          "http://127.0.0.1:8000/api/eda/bmi",
-          "http://127.0.0.1:8000/api/eda/preview",
-          "http://127.0.0.1:8000/api/eda/features",
-        ];
+        const BASE_URL =
+  "https://healthinsight-backend-bvvk.onrender.com";
+
+const urls = [
+  `${BASE_URL}/api/eda/overview`,
+  `${BASE_URL}/api/eda/gender`,
+  `${BASE_URL}/api/eda/target`,
+  `${BASE_URL}/api/eda/age`,
+  `${BASE_URL}/api/eda/bmi`,
+  `${BASE_URL}/api/eda/preview`,
+  `${BASE_URL}/api/eda/features`,
+];
 
         const responses = await Promise.all(
           urls.map((url) => fetch(url))

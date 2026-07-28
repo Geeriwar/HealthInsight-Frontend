@@ -28,10 +28,10 @@ function Analytics() {
           importanceResponse,
           reportResponse,
         ] = await Promise.all([
-          fetch("http://127.0.0.1:8000/api/analytics/metrics"),
-          fetch("http://127.0.0.1:8000/api/analytics/confusion-matrix"),
-          fetch("http://127.0.0.1:8000/api/analytics/feature-importance"),
-          fetch("http://127.0.0.1:8000/api/analytics/classification-report"),
+          fetch("https://healthinsight-backend-bvvk.onrender.com/api/analytics/metrics"),
+fetch("https://healthinsight-backend-bvvk.onrender.com/api/analytics/confusion-matrix"),
+fetch("https://healthinsight-backend-bvvk.onrender.com/api/analytics/feature-importance"),
+fetch("https://healthinsight-backend-bvvk.onrender.com/api/analytics/classification-report"),
         ]);
 
         const metricsData = await metricsResponse.json();
