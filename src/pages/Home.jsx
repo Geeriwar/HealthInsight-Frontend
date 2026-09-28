@@ -140,7 +140,7 @@ function Home() {
 
               <div className="mini-card">
                 <Brain size={28} />
-                <h2>98%</h2>
+                <h2>96.9%</h2>
                 <p>Accuracy</p>
               </div>
 
